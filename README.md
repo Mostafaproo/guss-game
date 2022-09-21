@@ -1,3 +1,3 @@
 # guss-game
 
-[a relative link](other_file.md)
+[link repo](https://mostafaproo.github.io/guss-game/)
