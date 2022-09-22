@@ -15,27 +15,14 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".number").textContent = secretNumber;
     document.querySelector(".message").innerHTML = "🎉 correct Number";
     document.body.style.backgroundColor = "green";
-  } else if (guss > secretNumber) {
+  }else if(guss !== secretNumber ){
     if (score > 1) {
-      document.querySelector(".message").innerHTML = "📈 Too High";
+      document.querySelector(".message").innerHTML = guss > secretNumber ?"📈 Too High" : "📉 Too low";
       score--;
       document.querySelector(".score").innerHTML = score;
     } else {
       document.querySelector(".message").innerHTML = " You Lost The Game";
       document.querySelector(".score").innerHTML = 0;
     }
-  } else if (guss < secretNumber) {
-    if (score > 1) {
-        document.querySelector(".message").innerHTML = "📉 Too low";
-        score--;
-        document.querySelector(".score").innerHTML = score;
-      } else {
-        document.querySelector(".message").innerHTML = " You Lost The Game";
-        document.querySelector(".score").innerHTML = 0;
-        document.body.style.backgroundColor = "#c9184a";
-        setTimeout(function() { 
-            window.location.reload();
-        },2000)
-      }
   }
 });
